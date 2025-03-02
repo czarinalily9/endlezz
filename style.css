@@ -2510,34 +2510,6 @@ ol {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}
-
-.blog-item:hover {
-    transform: translateY(-5px);
-}
-
-.blog {
- text-align: center;
-}
-
-.title p {
-    color: gray;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.blog-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.blog-item {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
     position: relative; /* Add this */
     padding-bottom: 60px; /* Add this to make space for the button */
 }
@@ -2606,10 +2578,10 @@ ol {
     border-radius: 5px;
     display: inline-block;
     transition: background 0.3s ease;
-    position: absolute; 
-    bottom: 30px;
-	left: 20%;
-    transform: translateX(-50%);
+    position: absolute; /* Change this */
+    bottom: 30px; /* Change this */
+    left: 20%; /* Change this */
+    transform: translateX(-50%); /* Change this */
 }
 
 .blog-text a:hover {
@@ -2643,8 +2615,9 @@ ol {
 
 .blog-post h1 {
     font-size: 2.5rem;
+	font-weight: 700;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .blog-post .post-meta {
