@@ -7,9 +7,7 @@
     <meta name="keywords" content="Yoga, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Carts - Endlezz Market</title>
-    <link rel="icon" type="image/png" href="img/icons/logo-circle.png" />
-
+    <title>Endlezz Market</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -17,67 +15,114 @@
         rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" integrity="sha512-uHuCigcmv3ByTqBQQEwngXWk7E/NaPYP+CFglpkXPnRQbSubJmEENgh+itRDYbWV0fUZmUz7fD/+JDdeQFD5+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.css" integrity="sha512-UhvuUthI9VM4N3ZJ5o1lZgj2zNtANzr3zyucuZZDy67BO6Ep5+rJN2PST7kPj+fOI7M/7wVeYaSaaAICmIQ4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" integrity="sha512-heyoieAHmpAL3BdaQMsbIOhVvGb4+pl4aGCZqWzX/f1BChRArrBy/XUZDHW9WVi5p6pf92pX4yjkfmdaIYa2QQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-    
-    <!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
       
       <style>
-        /* Ensuring full name and address are aligned */
-        .checkout-form .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
-        .checkout-form input[type="text"] {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+/* Ensuring full name and address are aligned */
+.checkout-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
 
-        /* Fixing alignment of Total, Subtotal, and Shipping */
-        .total-info .total-table table td {
-            text-align: left; /* Ensure all values are aligned to the left */
-        }
+/* Fixing alignment of input fields to make them span across properly */
+.checkout-form input[type="text"] {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Ensure input fields take up the full width */
+}
 
-        /* Adding space between payment option text and radio button */
-        .payment-method ul li {
-            margin-bottom: 10px; /* Add some space between options */
-        }
+/* Fixing alignment of Total, Subtotal, and Shipping */
+.total-info .total-table table td {
+    text-align: left; /* Ensure all values are aligned to the left */
+    padding: 10px 20px; /* Adjust padding for better spacing */
+}
 
-        .payment-method ul li label {
-            margin-left: 10px; /* Add space between the radio button and label text */
-        }
-        
-        /* Fix for table alignment, separate total and remove buttons */
-        .cart-table td, .cart-table th {
-            padding: 10px;
-            text-align: left;
-        }
+.total-info .total-table table th {
+    text-align: left; /* Ensure table headers align properly */
+    padding: 10px 20px;
+}
+
+/* Adjusting space between payment option text and radio button */
+.payment-method ul li {
+    margin-bottom: 20px; /* Add space between radio button and label */
+}
+
+.payment-method ul li label {
+    margin-left: 10px; /* Add some space between the radio button and label text */
+}
+
+/* Cart Table - Fixing alignment of text and content */
+.cart-table td, .cart-table th {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Container Settings for better responsiveness */
+.page-container {
+    max-width: 1200px; /* Maintain max-width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Prevent content from touching the edges */
+}
+
+@media (max-width: 1200px) {
+    .page-container {
+        max-width: 100%; /* Ensure it fills the screen on small devices */
+    }
+
+    /* Adjust the font size for better mobile view */
+    .cart-table td, .cart-table th {
+        font-size: 14px;
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
+
+    /* Reduce space around form inputs */
+    .checkout-form .form-group {
+        width: 100%;
+    }
+
+    /* Make buttons responsive as well */
+    .payment-method button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+/* Styling for 'Proceed to Payment' button */
+.payment-method button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-method button:hover {
+    background-color: #555;
+}
+
+/* Fix for image sizing */
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+}
+
       </style>
    </head>
    <body>
-   <!-- Header Section Begin -->
+     
+         <!-- Header Section Begin -->
 	    <!-- Header Info Begin -->
     <div class="header-info">
         <div class="container-fluid">
@@ -141,143 +186,143 @@
         </div>
     </header>
     <!-- Header End -->
+                  
+                  <section class="shopping-cart spad">
+    <div class="page-container"> <!-- New wrapper container -->
+        <div class="page-add cart-page-add">
+            <h3 class="cart-header">My Bag</h3>
+            <br> <br>
 
-<section class="container shopping-cart spad">
-    <div class="page-add cart-page-add">
-        <h3 class="cart-header">My Bag</h3>
-        <br> <br>
-
-        <div class="cart-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="product-h">Product</th>
-                        <th class="price-col">Price</th>
-                        <th class="quantity-col">Quantity</th>
-                        <th class="total">Total</th>
-                        <th class="product-close">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- First Product -->
-                    <tr>
-                        <td class="product-col">
-                            <img src="https://assets.onecompiler.app/432py2cy8/43ah7whq2/att.tv1PJad9z2ihw1GSNZbvzInN_0c3QCq9-52xwCKUDa0.jpg" alt="Product Image">
-                            <div class="p-title">
-                                <h5>Linen Ricrac Angel Print Regular Size Polo</h5>
-                                <p>Color: Black</p>
-                            </div>
-                        </td>
-                        <td class="price-col">₱420.90</td>
-                        <td class="quantity-col">
-                            <div class="pro-qty">
-                                <input type="number" value="2">
-                            </div>
-                        </td>
-                        <td class="total">₱841.80</td>
-                        <td class="product-close">
-                            <span class="remove-item">X</span>
-                        </td>
-                    </tr>
-
-                    <!-- Second Product -->
-                    <tr>
-                        <td class="product-col">
-                            <img src="https://assets.onecompiler.app/432py2cy8/43ah7whq2/img-14.jpg" alt="Product Image">
-                            <div class="p-title">
-                                <h5>Linen Minimalist Oversized Boxy Crop Vintage Retro Polo men</h5>
-                                <p>Color: Red</p>
-                            </div>
-                        </td>
-                        <td class="price-col">₱420.90</td>
-                        <td class="quantity-col">
-                            <div class="pro-qty">
-                                <input type="number" value="1">
-                            </div>
-                        </td>
-                        <td class="total">₱420.90</td>
-                        <td class="product-close">
-                            <span class="remove-item">X</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Coupon Section -->
-        <div class="cart-btn">
-            <div class="coupon-input">
-                <input type="text" placeholder="Enter coupon code">
-            </div>
-            <button class="site-btn apply-coupon-btn">Apply Coupon</button>
-        </div>
-
-        <!-- Total Price Section -->
-        <div class="total-info">
-            <div class="total-table">
+            <div class="cart-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Subtotal</th>
-                            <th>Shipping</th>
-                            <th>Total</th>
+                            <th class="product-h">Product</th>
+                            <th class="price-col">Price</th>
+                            <th class="quantity-col">Quantity</th>
+                            <th class="total">Total</th>
+                            <th class="product-close">Remove</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- First Product -->
                         <tr>
-                            <td class="sub-total">₱1,262.70</td>
-                            <td class="shipping">₱35.00</td>
-                            <td class="total-cart">₱1,297.70</td>
+                            <td class="product-col">
+                                <img src="https://assets.onecompiler.app/432py2cy8/43ah7whq2/att.tv1PJad9z2ihw1GSNZbvzInN_0c3QCq9-52xwCKUDa0.jpg" alt="Product Image">
+                                <div class="p-title">
+                                    <h5>Linen Angel Print Polo</h5>
+                                    <p>Color: Black</p>
+                                </div>
+                            </td>
+                            <td class="price-col">₱420.90</td>
+                            <td class="quantity-col">
+                                <div class="pro-qty">
+                                    <input type="number" value="2">
+                                </div>
+                            </td>
+                            <td class="total">₱841.80</td>
+                            <td class="product-close">
+                                <span class="remove-item">X</span>
+                            </td>
+                        </tr>
+
+                        <!-- Second Product -->
+                        <tr>
+                            <td class="product-col">
+                                <img src="https://assets.onecompiler.app/432py2cy8/43ah7whq2/img-14.jpg" alt="Product Image">
+                                <div class="p-title">
+                                    <h5>Linen Minimalist Cropped Polo</h5>
+                                    <p>Color: Red</p>
+                                </div>
+                            </td>
+                            <td class="price-col">₱420.90</td>
+                            <td class="quantity-col">
+                                <div class="pro-qty">
+                                    <input type="number" value="1">
+                                </div>
+                            </td>
+                            <td class="total">₱420.90</td>
+                            <td class="product-close">
+                                <span class="remove-item">X</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
 
-        <!-- Checkout Section -->
-        <div class="checkout-form">
-            <br>
-            <h3>Checkout</h3>
-            <br>
-            <!-- Full Name -->
-            <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+            <!-- Coupon Section -->
+            <div class="cart-btn">
+                <div class="coupon-input">
+                    <input type="text" placeholder="Enter coupon code">
+                </div>
+                <button class="site-btn apply-coupon-btn">Apply Coupon</button>
             </div>
 
-            <!-- Address -->
-            <div class="form-group">
-                <label for="address">Shipping Address</label>
-                <input type="text" id="address" name="address" placeholder="Enter your shipping address">
+            <!-- Total Price Section -->
+            <div class="total-info">
+                <div class="total-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subtotal</th>
+                                <th>Shipping</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sub-total">₱1,262.70</td>
+                                <td class="shipping">₱35.00</td>
+                                <td class="total-cart">₱1,297.70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <!-- Payment Methods -->
-            <div class="payment-method">
+            <!-- Checkout Section -->
+            <div class="checkout-form">
                 <br>
-                <h3>Select Payment Method</h3>
-                <br>
-                <ul>
-                    <li>
-                        <input type="radio" id="credit-card" name="payment-method" value="credit-card">
-                        <label for="credit-card">Credit Card</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="paypal" name="payment-method" value="paypal">
-                        <label for="paypal">PayPal</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
-                        <label for="bank-transfer">Bank Transfer</label>
-                    </li>
-                </ul>
-                <br>
-                <button type="button">Proceed to Payment</button>
+                <h3>Checkout</h3>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your shipping address">
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-method">
+                    <br>
+                    <h3>Select Payment Method</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                            <label for="credit-card">Credit Card</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="paypal" name="payment-method" value="paypal">
+                            <label for="paypal">PayPal</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                            <label for="bank-transfer">Bank Transfer</label>
+                        </li>
+                    </ul>
+                    <br>
+                    <button type="button">Proceed to Payment</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-    <!-- Logo Section Begin -->
+                  
+                      <!-- Logo Section Begin -->
     <div class="logo-section spad">
         <div class="logo-items owl-carousel">
             <div class="logo-item">
@@ -383,20 +428,20 @@
   Adrian Ivan Aldea | Ed Rizz Del Corro | Irish Gail De Leon | Myrielle Alexcis Jerusalem | Lily Sy
   <!-- Copyright --></p>
             </div>
-
-
 		</div>
     </footer>
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" integrity="sha512-AmJ0T6lpw/ZQtCleMyfbraDy8AGQ9tWaB/PmRkXdKxH9Kvo0oTuW6+2hTEQ89mHkFIO/LpColEe3+QE+FJtgIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
+  
