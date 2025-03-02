@@ -1,7 +1,3 @@
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
-
 html,
 body {
 	height: 100%;
@@ -124,6 +120,7 @@ ol {
 /* buttons */
 
 .primary-btn {
+	text-decoration: none;
 	color: #fff;
 	display: inline-block;
 	font-size: 14px;
@@ -320,6 +317,7 @@ ol {
 }
 
 .inner-header .main-menu ul li a {
+	text-decoration: none;
 	color: #1e1e1e;
 	font-size: 16px;
 	display: inline-block;
@@ -821,7 +819,13 @@ ol {
 }
 
 .lookbok-left .primary-btn.look-btn {
-	background-color: #B0BCC2;
+    background-color: #B0BCC2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lookbok-left .primary-btn.look-btn:hover {
+    background-color: #262626;
+    color: white;
 }
 
 .lookbok-right {
@@ -843,6 +847,7 @@ ol {
 	font-weight: 500;
 	margin-bottom: 40px;
 }
+
 
 .lookbok-right .primary-btn.look-btn {
 	background-color: #B0BCC2;
@@ -2371,10 +2376,14 @@ ol {
     text-align: center;
 }
 
+/*---------------------
+  Testimonials Page
+-----------------------*/
+
 .testimonials-section h2{
    font-size: 2.8rem;
 }
-/* Align all testimonial cards in a row */
+
 .testimonial-cards {
     display: flex;
     flex-wrap: wrap;
@@ -2382,7 +2391,6 @@ ol {
     gap: 20px;
 }
 
-/* Individual Testimonial card */
 .testimonial-card {
     background-color: #fff;
     border-radius: 8px;
@@ -2395,7 +2403,6 @@ ol {
     text-align: left;
 }
 
-/* Testimonial header for name */
 .testimonial-header {
     margin-bottom: 20px;
 }
@@ -2405,14 +2412,12 @@ ol {
     font-weight:bold;
 }
 
-/* Rating above the picture */
 .testimonial-rating {
     margin-bottom: 15px;
     color: #ffcc00;
     font-size: 1.5rem;
 }
 
-/* Review text - Centered */
 .testimonial-content {
     margin-bottom: 20px;
     text-align: center; 
@@ -2424,7 +2429,6 @@ ol {
     color: #555;
 }
 
-/* Square Image for each testimonial */
 .testimonial-img {
     margin-bottom: 20px;
     width: 150px; 
@@ -2442,7 +2446,6 @@ ol {
     object-fit: cover;
 }
 
-/* Item information below image */
 .testimonial-item-info {
     font-size: 0.9rem;
     color: #333;
@@ -2452,7 +2455,6 @@ ol {
     margin: 5px 0;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
     .testimonial-card {
         width: 48%;
@@ -2465,7 +2467,6 @@ ol {
     }
 }
 
-/* Hover effect for the testimonial cards */
 .testimonial-card {
     position: relative;
     background-color: #fff;
@@ -2476,15 +2477,18 @@ ol {
 }
 
 .testimonial-card:hover {
-    transform: translateY(-7px); /* Slightly lift the card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a soft shadow for a floating effect */
+    transform: translateY(-7px); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-card .testimonial-content p {
     transition: all 0.3s ease;
 }
 
-/* Modern Blog Styles */
+/*---------------------
+  Blog Page
+-----------------------*/
+
 .blog {
     text-align: center;
 }
@@ -2585,7 +2589,9 @@ ol {
     }
 }
 
-    /* Blog Post Page Styles */
+/*---------------------
+   Blog Post Page
+-----------------------*/
 
 	.blog-post {
 		max-width: 800px;
@@ -2692,5 +2698,5 @@ ol {
 		color: #007BFF;
 		transform: scale(1.1);
 	}
-	
+
 	
