@@ -2643,7 +2643,7 @@ ol {
 .blog-post {
     max-width: 1000px; /* Increased width */
     margin: 50px auto;
-    padding: 20px;
+    padding: 40px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
