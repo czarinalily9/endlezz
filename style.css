@@ -2979,6 +2979,12 @@ ol {
   padding: 0 20px;
 }
 
+.cart-container {
+  max-width: 1200px; /* Maximum width for the main content */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add some padding for spacing */
+}
+
 .cart-table {
   margin-bottom: 28px;
 }
@@ -3277,6 +3283,67 @@ ol {
 .total-info .total-table table th {
   text-align: left;
   padding-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 785px) {
+  .cart-container {
+    padding: 0 10px;
+  }
+  .cart-table table .product-h {
+    width: 25%;
+  }
+  .cart-table table .price-col,
+  .cart-table table .quantity-col,
+  .cart-table table .total {
+    width: 20%;
+  }
+  .cart-btn {
+    padding: 30px 15px;
+  }
+  .checkout-form,
+  .payment-method {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .cart-table table .product-h {
+    width: 40%;
+  }
+  .cart-table table .price-col,
+  .cart-table table .quantity-col,
+  .cart-table table .total {
+    width: 25%;
+  }
+  .cart-btn {
+    padding: 20px 10px;
+  }
+  .checkout-form,
+  .payment-method {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .cart-table table .product-h {
+    width: 50%;
+  }
+  .cart-table table .price-col,
+  .cart-table table .quantity-col,
+  .cart-table table .total {
+    width: 30%;
+  }
+  .cart-btn {
+    padding: 15px 5px;
+  }
+  .checkout-form,
+  .payment-method {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 /*---------------------
