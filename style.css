@@ -227,6 +227,59 @@ ol {
   Header
 -----------------------*/
 
+/*---------------------
+      NEW Header
+-----------------------*/
+
+/* Left Navigation */
+.left-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.left-menu ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.left-menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+	
+}
+/* Right Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right img {
+    width: 24px; /* Adjust icon size */
+    cursor: pointer;
+}
+
+/* Sub-menu Dropdown */
+.left-menu ul .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    padding: 0;
+}
+
+/*---------------------
+     END NEW  Header
+-----------------------*/
+
 .header-section {
 	height: 104px;
 	padding-top: 38px;
@@ -881,7 +934,10 @@ ol {
 /*---------------------
   Logo Section
 -----------------------*/
-
+.logo {
+	flex-grow:1;
+	text-align: center;
+}
 .logo-section {
 	padding: 70px 120px;
 }
