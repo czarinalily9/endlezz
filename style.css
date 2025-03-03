@@ -233,6 +233,7 @@ ol {
 	padding-bottom: 24px;
 	padding-left: 45px;
 	padding-right: 45px;
+	background-color: white;
 }
 
 .inner-header .logo {
@@ -3472,6 +3473,206 @@ ol {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+/*---------------------
+  look video Total Page
+-----------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.containers {
+    position: sticky;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 95px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.content a {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.content a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.background-clip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;  /* Adjust width as needed */
+    height: 80vh; /* Adjust height as needed */
+    transform: translate(-50%, -50%); /* Centers the video */
+    object-fit: cover;
+    z-index: -1;
+}
+
+.minimalist {
+    position: sticky;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+	background-color: white;
+}
+
+.minimalist-left {
+	padding-top: 105px;
+}
+
+.minimalist-left .section-title {
+	margin-bottom: 30px;
+}
+
+.minimalist-left .section-title h2 {
+	font-size: 90px;
+	line-height: 50px;
+}
+
+.minimalist-left .section-title h1 {
+	font-size: 120px;
+	line-height: 100px;
+}
+
+.minimalist-left p {
+	color: #787878;
+	font-size: 14px;
+	line-height: 27px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+
+.minimalist-left .primary-btn.look-btn {
+    background-color: #B0BCC2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.minimalist-left .primary-btn.look-btn:hover {
+    background-color: #262626;
+    color: white;
+}
+
+.minimalist-right {
+	padding-top: 105px;
+}
+
+.minimalist-right .section-title {
+	margin-bottom: 30px;
+}
+
+.minimalist-right .section-title h2 {
+	line-height: 50px;
+}
+
+.minimalist-right p {
+	color: #787878;
+	font-size: 14px;
+	line-height: 27px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+
+
+.minimalist-right .primary-btn.look-btn {
+	background-color: #B0BCC2;
+}
+
+.minimalist-pic {
+	position: relative;
+}
+
+.minimalist-pic img {
+	min-width: 100%;
+	height: 100%;
+}
+
+.minimalist-pic .pic-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	font-size: 120px;
+	color: #fff;
+	font-weight: 600;
+	line-height: 97px;
+}
+
+
+
+.modal {
+    padding: 1em;
+    max-width: 75ch;
+    max-height: 80vh; /* Limits the height to 80% of the viewport */
+    z-index: 20;
+    background: white; /* Ensure background color */
+    border: 0;
+	box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    position: fixed; /* Position it fixed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning */
+    display: block; /* Ensure it is displayed */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    transition: box-shadow 0.3s ease, opacity 0.5s ease;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.5; /* Adjust the value as needed */\
+}
+
+.modal > * {
+    margin: 0 0 0.5rem 0;
+}
+
+.modal::backdrop {
+	background: rgb(0 0 0 / .4);
+	opacity: .1;
+}
+
+@media (min-aspect-ratio:16/9) {
+	.background-clip{
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio:16/9) {
+	.background-clip{
+		width: auto;
+		height: 100%;
+	}
 }
 
 	
