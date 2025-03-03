@@ -230,6 +230,23 @@ ol {
 /*---------------------
       NEW Header
 -----------------------*/
+/* Header Container */
+.header-section {
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Header Layout */
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Left Navigation */
 .left-menu ul {
@@ -250,18 +267,6 @@ ol {
     color: #333;
     padding: 10px 15px;
     display: block;
-	
-}
-/* Right Icons */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-right img {
-    width: 24px; /* Adjust icon size */
-    cursor: pointer;
 }
 
 /* Sub-menu Dropdown */
@@ -276,6 +281,42 @@ ol {
     padding: 0;
 }
 
+.left-menu ul .sub-menu li {
+    display: block;
+}
+
+.left-menu ul .sub-menu li a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    background: #f8f8f8;
+}
+
+.left-menu ul li:hover .sub-menu {
+    display: block;
+}
+
+/* Center Logo */
+.logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px; /* Adjust as needed */
+}
+
+/* Right Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right img {
+    width: 24px; /* Adjust icon size */
+    cursor: pointer;
+}
 /*---------------------
      END NEW  Header
 -----------------------*/
@@ -934,10 +975,6 @@ ol {
 /*---------------------
   Logo Section
 -----------------------*/
-.logo {
-	flex-grow:1;
-	text-align: center;
-}
 .logo-section {
 	padding: 70px 120px;
 }
