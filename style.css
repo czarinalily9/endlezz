@@ -615,8 +615,9 @@ ol {
 
 .features-box .single-box-item.first-box .box-text {
 	position: absolute;
-	right: 60px;
-	top: 106px;
+	left: 10px;
+	top: 10px
+	text-align: left;
 }
 
 .features-box .single-box-item.first-box .box-text .trend-alert {
@@ -641,8 +642,9 @@ ol {
 
 .features-box .single-box-item.second-box .box-text {
 	position: absolute;
-	left: 56px;
-	top: 150px;
+	right: 10px;
+	bottom: 10px
+	text-align: right;
 }
 
 .features-box .single-box-item.second-box .box-text .trend-year {
@@ -662,8 +664,9 @@ ol {
 
 .features-box .single-box-item.large-box .box-text {
 	position: absolute;
-	left: 125px;
-	top: 60px;
+	left: 10px;
+	top: 10px
+	text-align: left;
 }
 
 .features-box .single-box-item.large-box .box-text .trend-year {
