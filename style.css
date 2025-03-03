@@ -616,7 +616,7 @@ ol {
 .features-box .single-box-item.first-box .box-text {
 	position: absolute;
 	left: 10px;
-	top: 10px
+	top: 10px;
 	text-align: left;
 }
 
@@ -643,7 +643,7 @@ ol {
 .features-box .single-box-item.second-box .box-text {
 	position: absolute;
 	right: 10px;
-	bottom: 10px
+	bottom: 10px;
 	text-align: right;
 }
 
@@ -665,7 +665,7 @@ ol {
 .features-box .single-box-item.large-box .box-text {
 	position: absolute;
 	left: 10px;
-	top: 10px
+	top: 10px;
 	text-align: left;
 }
 
