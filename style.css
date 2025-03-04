@@ -1813,6 +1813,11 @@ ol {
   border: 2px solid #EEF1F2;
   border-radius: 50px;
   text-align: center;
+  display: inline-block;  /* Keep it as inline block to prevent full width */
+}
+
+.cart-table table .quantity-col .pro-qty button {
+  display: none !important;  /* Hides the quantity buttons */
 }
 
 .cart-table table .quantity-col .pro-qty input {
@@ -1870,21 +1875,22 @@ ol {
   text-transform: uppercase;
 }
 
-.cart-btn .site-btn.apply-coupon-btn {
-  width: 100%;
+/* Apply Coupon Button */
+.cart-btn .site-btn .apply-coupon-btn {
+  width: 100%; /* Keep it wide */
   padding: 16px;
   border-radius: 50px;
   text-transform: uppercase;
   color: #fff;
-  background: #1e1e1e;
-  border: 2px solid #1e1e1e;
+  background: #1e1e1e; /* Set the background color */
+  border: 2px solid #1e1e1e; /* Set the border */
   margin-top: 12px;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .cart-btn .site-btn.apply-coupon-btn:hover {
-  background: #4a4a4a;
-  color: #fff;
+  background: #4a4a4a; /* Darken the background on hover */
+  color: #fff; /* Ensure text color stays white on hover */
 }
 
 .cart-btn .site-btn.clear-btn {
@@ -2283,6 +2289,232 @@ ol {
   width: 15px;
   border: 2px solid #D0D7DB;
   content: "";
+}
+/* Adjust cart for mobile view */
+@media only screen and (max-width: 768px) {
+  .cart-container {
+    padding: 0 10px;
+  }
+
+  .cart-table table {
+    width: 100%;
+    font-size: 14px; /* Adjust font size for better readability on mobile */
+  }
+
+  .cart-table table thead tr th {
+    font-size: 10px; /* Smaller header text */
+  }
+
+  .cart-table table .product-h {
+    font-size: 16px; /* Smaller product names for mobile */
+    width: 40%; /* Adjust width of product column */
+    text-align: left; /* Align text to the left */
+  }
+
+  .cart-table table .product-col {
+    display: flex;
+    flex-direction: row; /* Maintain row structure */
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cart-table table .product-col img {
+    max-width: 120px; /* Adjust image size for mobile */
+    width: 100px; /* Fixed size for product image */
+  }
+
+  .cart-table table .product-col .p-title {
+    font-size: 14px; /* Make product title smaller */
+  }
+
+  .cart-table table .product-col .p-color {
+    font-size: 12px; /* Smaller color text for mobile */
+  }
+
+  .cart-table table .price-col, .cart-table table .total {
+    width: 20%; /* Adjust width of price and total columns */
+    font-size: 14px; /* Smaller text */
+    padding-right: 10px;
+  }
+
+  .cart-table table .quantity-col {
+    width: 25%; /* Increase width of quantity column */
+    text-align: center;
+  }
+
+  .cart-table table .quantity-col .pro-qty input {
+    font-size: 16px; /* Smaller input text */
+  }
+
+  .cart-table table .product-close {
+    width: 10%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .cart-btn {
+    padding: 30px 10px; /* Reduce padding for mobile */
+  }
+
+  .cart-btn .coupon-input input {
+    height: 45px;
+    font-size: 16px; /* Adjust input field size */
+  }
+
+  .cart-btn .site-btn .apply-coupon-btn {
+    padding: 14px;
+    font-size: 16px; /* Adjust button size */
+  }
+}
+
+/* Adjust cart for mobile view */
+@media only screen and (max-width: 768px) {
+  .cart-container {
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .cart-table table {
+    width: 100%;
+    font-size: 14px; /* Adjust font size for better readability on mobile */
+    table-layout: auto; /* Allow table to adapt to content */
+  }
+
+  .cart-table table thead tr th {
+    font-size: 10px; /* Smaller header text */
+  }
+
+  .cart-table table .product-h {
+    font-size: 16px; /* Smaller product names for mobile */
+    width: 45%; /* Adjust width of product column */
+    text-align: left; /* Align text to the left */
+  }
+
+  .cart-table table .product-col {
+    display: flex;
+    flex-direction: column; /* Stack product image and text vertically */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .cart-table table .product-col img {
+    max-width: 100px; /* Adjust image size for mobile */
+    width: 100%; /* Image takes up full width of its container */
+    margin-bottom: 10px;
+  }
+
+  .cart-table table .product-col .p-title {
+    font-size: 14px; /* Make product title smaller */
+    margin-bottom: 5px;
+  }
+
+  .cart-table table .product-col .p-color {
+    font-size: 12px; /* Smaller color text for mobile */
+  }
+
+  .cart-table table .price-col, .cart-table table .total {
+    width: 22%; /* Adjust width of price and total columns */
+    font-size: 14px; /* Smaller text */
+    padding-right: 10px;
+    text-align: center; /* Align text to center */
+  }
+
+  .cart-table table .quantity-col {
+    width: 28%; /* Increase width of quantity column */
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .cart-table table .quantity-col .pro-qty input {
+    font-size: 16px; /* Smaller input text */
+    width: 80%; /* Adjust width of the quantity input */
+  }
+
+  .cart-table table .product-close {
+    width: 10%;
+    font-size: 16px; /* Adjust close button font size */
+    text-align: center;
+  }
+
+  .cart-btn {
+    padding: 20px 10px; /* Reduced padding for mobile */
+  }
+
+  .cart-btn .coupon-input input {
+    height: 40px;
+    font-size: 14px; /* Adjust input field size */
+  }
+
+  .cart-btn .site-btn .apply-coupon-btn {
+    padding: 12px;
+    font-size: 14px; /* Adjust button size */
+  }
+}
+
+/* Phones in portrait mode */
+@media only screen and (max-width: 480px) {
+  .cart-container {
+    padding: 0 5px;
+  }
+
+  .cart-table table .product-h {
+    font-size: 14px; /* Even smaller text for mobile */
+    width: 50%; /* Make the product name column take more space */
+  }
+
+  .cart-table table .product-col {
+    flex-direction: column; /* Stack product image and title vertically */
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cart-table table .product-col img {
+    max-width: 80px; /* Further reduce image size */
+    width: 80%; /* Image takes up a smaller portion of the container */
+    margin-bottom: 10px;
+  }
+
+  .cart-table table .product-col .p-title {
+    font-size: 12px; /* Reduce product title size */
+  }
+
+  .cart-btn .coupon-input input {
+    height: 35px;
+    font-size: 12px; /* Smaller input field size */
+  }
+
+  .cart-btn .site-btn .apply-coupon-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .cart-btn {
+    padding: 15px 5px; /* Reduce padding */
+  }
+
+  .cart-table table .quantity-col {
+    width: 35%; /* Increase width for mobile quantity input */
+    font-size: 12px;
+  }
+
+  .cart-table table .product-close {
+    font-size: 12px; /* Adjust close button font size */
+    width: 8%; /* Adjust width for mobile view */
+  }
+
+  /* Adjust total-info for mobile */
+  .total-info .total-table table td, .total-info .total-table table th {
+    font-size: 12px; /* Smaller font for totals */
+  }
+
+  .total-info .total-table table tr .total-cart {
+    font-size: 14px; /* Adjust font size for mobile */
+    padding-right: 10px;
+  }
+
+  .cart-table td, .cart-table th {
+    padding: 8px 5px; /* Adjust padding for mobile view */
+  }
 }
 
 /*---------------------
