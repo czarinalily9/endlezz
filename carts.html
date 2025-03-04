@@ -67,7 +67,7 @@
 
 /* Container Settings for better responsiveness */
 .page-container {
-    max-width: 1350px; /* Adjusted to make cart container narrower */
+    max-width: 1300px; /* Adjusted to make cart container narrower */
     margin: 0 auto; /* Center the content */
     padding: 0 15px; /* Prevent content from touching the edges */
 }
@@ -92,6 +92,30 @@
     .payment-method button {
         width: 100%;
         padding: 12px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-info {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 150px; /* Smaller logo for mobile view */
+    }
+
+    .cart-table img {
+        width: 60px; /* Adjust product images for mobile */
+    }
+
+    .cart-table td, .cart-table th {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .cart-btn .apply-coupon-btn {
+        width: 100%;
+        padding: 10px;
     }
 }
 
@@ -155,70 +179,89 @@ img {
 </head>
 
 <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->
+
     <!-- Header Section Begin -->
-    <!-- Header Info Begin -->
+<!-- Promo Header Begin -->
     <div class="header-info">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="header-item">
-                        <img src="img/icons/delivery.png" alt="">
-                        <p>Free shipping on orders over ₱2000 in the Philippines</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-left text-lg-center">
-                    <div class="header-item">
-                        <img src="img/icons/voucher.png" alt="">
-                        <p>20% Mapua Student Discount</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-left text-xl-right">
-                    <div class="header-item">
-                        <img src="img/icons/sales.png" alt="">
-                        <p>10% off on 2024 Collection. Use code: AINTstudio</p>
-                    </div>
-                </div>
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+        <span style="margin-right: 50px;">FREE SHIPPING ON ORDERS OVER P2000 IN THE PHILIPPINES</span>
+	<span style="margin-right: 50px;">|</span>
+        <span style="margin-right: 50px;"> 20% MAPUAN DISCOUNT </span>
+	<span style="margin-right: 50px;">|</span>
+        <span style="margin-right: 50px;"> 10% OFF ON 2024 COLLECTION </span>
+	<span style="margin-right: 50px;">|</span>
+	<span style="margin-right: 50px;"> 5% OFF CODE: BLANCAFLOR </span>
+    </marquee>
+    </div>
+    <!-- Promo Header End -->
+	
+<header class="header-section">
+    <div class="container-fluid">
+        <div class="inner-header">
+            
+            <!-- Left Navigation Menu -->
+            <nav class="left-menu">
+                <ul>
+                    <li>
+                        <a href="#">BEHIND THE BRAND</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">FEATURED</a>
+                        <ul class="sub-menu">
+                            <li><a href="lookbook.html">LOOKBOOK</a></li>
+                            <li><a href="blog.html">BLOG</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">SHOP</a>
+                        <ul class="sub-menu">
+                            <li><a href="collection.html">COLLECTIONS</a></li>
+                            <li><a href="sizeguide.html">SIZE CHART</a></li>
+                            <li><a href="review.html">REVIEW</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Centered Logo -->
+            <div class="logo">
+                <a href="./index.html"><img src="img/logo.png" alt="Brand Logo"></a>
             </div>
+
+            <!-- Right Icons -->
+            <div class="header-right">
+                <img src="img/icons/search.png" alt="Search" class="search-trigger">
+                <a href="comingsoon.html"><img src="img/icons/man.png" alt="User"></a>
+                <a href="carts.html"><img src="img/icons/bag.png" alt="Cart"></a>
+            </div>
+            
         </div>
     </div>
-    <!-- Header Info End -->
+</header>
 
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="inner-header">
-                <div class="logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                </div>
-                <div class="header-right">
-                    <img src="img/icons/search.png" alt="" class="search-trigger">
-                    <img src="img/icons/man.png" alt="">
-                    <a href="#">
-                        <img src="img/icons/bag.png" alt="">
-                        <span>2</span>
-                    </a>
-                </div>
-                <div class="user-access">
-                    <a href="#">Register</a>
-                    <a href="#" class="in">Sign in</a>
-                </div>
-                <nav class="main-menu mobile-menu">
-                    <ul>
-                        <li><a class="active" href="./index.html">Home</a></li>
-                        <li><a href="./collection.html">Collections</a>
-                            <ul class="sub-menu">
-                                <li><a href="./product-page.html">Shop</a></li>
-                                <li><a href="contact.html">Product Size</a></li>
-                                <li><a href="contact.html">Reviews</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./contact.html">About</a></li>
-                        <li><a href="./contact.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+
+
     <!-- Header End -->
 
 <section class="shopping-cart spad">
@@ -364,28 +407,6 @@ img {
         </div>
     </div>
 </section>
-                  
-                      <!-- Logo Section Begin -->
-    <div class="logo-section spad">
-        <div class="logo-items owl-carousel">
-            <div class="logo-item">
-                <img src="img/logos/logo-1.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="img/logos/logo-2.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="img/logos/logo-3.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="img/logos/logo-4.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="img/logos/logo-5.png" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Logo Section End -->
 
      <!-- Footer Section Begin -->
     <footer class="footer-section spad">
