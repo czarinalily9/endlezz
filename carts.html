@@ -22,159 +22,170 @@
     <link rel="stylesheet" href="style.css" type="text/css">
       
 <style>
-/* Ensuring full name and address are aligned */
-.checkout-form .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    width: 100%;
-}
+       /* Ensuring the cart and all elements shrink responsively */
+        .checkout-form input[type="text"], .checkout-form select, .checkout-form button {
+            width: 100%; /* Ensure these elements span full width */
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-/* Fixing alignment of input fields to make them span across properly */
-.checkout-form input[type="text"] {
-    padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%; /* Ensure input fields take up the full width */
-}
+        .checkout-form label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
 
-/* Fixing alignment of Total, Subtotal, and Shipping */
-.total-info .total-table table td {
-    text-align: left; /* Ensure all values are aligned to the left */
-    padding: 10px 20px; /* Adjust padding for better spacing */
-}
+        /* Cart table adjustments */
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-.total-info .total-table table th {
-    text-align: left; /* Ensure table headers align properly */
-    padding: 10px 20px;
-}
+        .cart-table td, .cart-table th {
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+        }
 
-/* Adjusting space between payment option text and radio button */
-.payment-method ul li {
-    margin-bottom: 20px; /* Add space between radio button and label */
-}
+        .cart-table th {
+            background-color: #f1f1f1;
+        }
 
-.payment-method ul li label {
-    margin-left: 10px; /* Add some space between the radio button and label text */
-}
+        .cart-table img {
+            width: 60px;
+            height: auto;
+        }
 
-/* Cart Table - Fixing alignment of text and content */
-.cart-table td, .cart-table th {
-    padding: 12px 15px;
-    text-align: left;
-}
+        /* Making buttons and elements larger on mobile */
+        .payment-method button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-/* Container Settings for better responsiveness */
-.page-container {
-    max-width: 1300px; /* Adjusted to make cart container narrower */
-    margin: 0 auto; /* Center the content */
-    padding: 0 15px; /* Prevent content from touching the edges */
-}
+        .payment-method button:hover {
+            background-color: #555;
+        }
 
-@media (max-width: 1200px) {
-    .page-container {
-        max-width: 100%; /* Ensure it fills the screen on smaller devices */
-    }
+        /* Flexbox used to create a responsive checkout */
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
-    /* Adjust the font size for better mobile view */
-    .cart-table td, .cart-table th {
-        font-size: 14px;
-        padding: 8px 10px; /* Adjust padding for smaller screens */
-    }
+        /* Responsive table and cart items */
+        @media (max-width: 1200px) {
+            .cart-table td, .cart-table th {
+                font-size: 14px;
+                padding: 10px;
+            }
 
-    /* Reduce space around form inputs */
-    .checkout-form .form-group {
-        width: 100%;
-    }
+            .cart-table img {
+                width: 50px;
+            }
 
-    /* Make buttons responsive as well */
-    .payment-method button {
-        width: 100%;
-        padding: 12px 0;
-    }
-}
+            .payment-method button {
+                padding: 12px;
+                font-size: 14px;
+            }
 
-@media (max-width: 768px) {
-    .header-info {
-        font-size: 14px;
-    }
+            .checkout-form input[type="text"], .checkout-form select {
+                padding: 10px;
+            }
+        }
 
-    .logo img {
-        width: 150px; /* Smaller logo for mobile view */
-    }
+        @media (max-width: 992px) {
+            .checkout-form label {
+                font-size: 14px;
+            }
 
-    .cart-table img {
-        width: 60px; /* Adjust product images for mobile */
-    }
+            .cart-table td, .cart-table th {
+                font-size: 12px;
+                padding: 8px;
+            }
 
-    .cart-table td, .cart-table th {
-        font-size: 12px;
-        padding: 6px 8px;
-    }
+            .payment-method button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
 
-    .cart-btn .apply-coupon-btn {
-        width: 100%;
-        padding: 10px;
-    }
-}
+        @media (max-width: 768px) {
+            .header__logo img {
+                width: 150px; /* Adjust logo size */
+            }
 
-/* Styling for 'Proceed to Payment' button */
-.payment-method button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+            .cart-table td, .cart-table th {
+                font-size: 12px;
+                padding: 6px;
+            }
 
-.payment-method button:hover {
-    background-color: #555;
-}
+            .payment-method button {
+                font-size: 14px;
+                padding: 10px;
+            }
 
-/* Fix for image sizing */
-img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
-}
+            /* Make sure form fields adjust */
+            .checkout-form input[type="text"], .checkout-form select {
+                font-size: 14px;
+                padding: 8px;
+            }
 
-/* Apply Coupon Button Style */
-.cart-btn .apply-coupon-btn {
-    width: 100%; 
-    padding: 12px; 
-    background-color: #e0e0e0; 
-    color: #333; 
-    border: 1px solid #ccc; 
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-}
+            .cart-table img {
+                width: 40px;
+            }
+        }
 
-.cart-btn .apply-coupon-btn:hover {
-    background-color: #d0d0d0; /* Hover effect (lighter shade) */
-}
+        @media (max-width: 576px) {
+            .cart-table td, .cart-table th {
+                font-size: 10px;
+                padding: 4px;
+            }
 
-.cart-table input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
-    -webkit-appearance: none;   /* Chrome/Safari */
-    appearance: none;           /* Standard */
-    width: 60px; /* Adjust width if needed */
-    padding: 5px;
-}
+            .payment-method button {
+                font-size: 12px;
+                padding: 8px;
+            }
 
-/* New styling for payment logos */
-.payment-logo-container {
-    display: inline-block;
-    margin-left: 10px;
-}
+            .checkout-form input[type="text"], .checkout-form select {
+                font-size: 12px;
+                padding: 6px;
+            }
 
-.payment-logo {
-    width: 30px; /* Adjust the size of the logo */
-    height: auto;
-}
+            .header-info marquee {
+                font-size: 12px;
+            }
+        }
+
+        /* For smaller mobile devices, ensure proper scaling */
+        @media (max-width: 400px) {
+            .cart-table td, .cart-table th {
+                font-size: 8px;
+                padding: 2px;
+            }
+
+            .payment-method button {
+                font-size: 10px;
+                padding: 6px;
+            }
+
+            .checkout-form input[type="text"], .checkout-form select {
+                font-size: 10px;
+                padding: 5px;
+            }
+
+            .header__logo img {
+                width: 120px;
+            }
+        }
     </style>
 </head>
 
