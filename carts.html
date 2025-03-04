@@ -22,159 +22,202 @@
     <link rel="stylesheet" href="style.css" type="text/css">
       
 <style>
-   /* Ensuring full name and address are aligned */
-.checkout-form .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-/* Fixing alignment of input fields to make them span across properly */
-.checkout-form input[type="text"] {
-    padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%; /* Ensure input fields take up the full width */
-}
-
-/* Fixing alignment of Total, Subtotal, and Shipping */
-.total-info .total-table table td {
-    text-align: left; /* Ensure all values are aligned to the left */
-    padding: 10px 20px; /* Adjust padding for better spacing */
-}
-
-.total-info .total-table table th {
-    text-align: left; /* Ensure table headers align properly */
-    padding: 10px 20px;
-}
-
-/* Adjusting space between payment option text and radio button */
-.payment-method ul li {
-    margin-bottom: 20px; /* Add space between radio button and label */
-}
-
-.payment-method ul li label {
-    margin-left: 10px; /* Add some space between the radio button and label text */
-}
-
-/* Cart Table - Fixing alignment of text and content */
-.cart-table td, .cart-table th {
-    padding: 12px 15px;
-    text-align: left;
-}
-
-/* Container Settings for better responsiveness */
-.page-container {
-    max-width: 1300px; /* Adjusted to make cart container narrower */
-    margin: 0 auto; /* Center the content */
-    padding: 0 15px; /* Prevent content from touching the edges */
-}
-
-@media (max-width: 1200px) {
-    .page-container {
-        max-width: 100%; /* Ensure it fills the screen on smaller devices */
-    }
-
-    /* Adjust the font size for better mobile view */
-    .cart-table td, .cart-table th {
-        font-size: 14px;
-        padding: 8px 10px; /* Adjust padding for smaller screens */
-    }
-
-    /* Reduce space around form inputs */
+    /* Ensuring full name and address are aligned */
     .checkout-form .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
         width: 100%;
     }
 
-    /* Make buttons responsive as well */
-    .payment-method button {
-        width: 100%;
-        padding: 12px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-info {
-        font-size: 14px;
+    /* Fixing alignment of input fields to make them span across properly */
+    .checkout-form input[type="text"] {
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%; /* Ensure input fields take up the full width */
     }
 
-    .logo img {
-        width: 150px; /* Smaller logo for mobile view */
+    /* Fixing alignment of Total, Subtotal, and Shipping */
+    .total-info .total-table table td {
+        text-align: left; /* Ensure all values are aligned to the left */
+        padding: 10px 20px; /* Adjust padding for better spacing */
     }
 
-    .cart-table img {
-        width: 60px; /* Adjust product images for mobile */
+    .total-info .total-table table th {
+        text-align: left; /* Ensure table headers align properly */
+        padding: 10px 20px;
     }
 
+    /* Adjusting space between payment option text and radio button */
+    .payment-method ul li {
+        margin-bottom: 20px; /* Add space between radio button and label */
+    }
+
+    .payment-method ul li label {
+        margin-left: 10px; /* Add some space between the radio button and label text */
+    }
+
+    /* Cart Table - Fixing alignment of text and content */
     .cart-table td, .cart-table th {
-        font-size: 12px;
-        padding: 6px 8px;
+        padding: 12px 15px;
+        text-align: left;
+        word-wrap: break-word; /* Ensure long text wraps */
     }
 
+    /* Container Settings for better responsiveness */
+    .page-container {
+        max-width: 1300px; /* Adjusted to make cart container narrower */
+        margin: 0 auto; /* Center the content */
+        padding: 0 15px; /* Prevent content from touching the edges */
+    }
+
+    @media (max-width: 1200px) {
+        .page-container {
+            max-width: 100%; /* Ensure it fills the screen on smaller devices */
+        }
+
+        /* Adjust the font size for better mobile view */
+        .cart-table td, .cart-table th {
+            font-size: 14px;
+            padding: 8px 10px; /* Adjust padding for smaller screens */
+        }
+
+        /* Reduce space around form inputs */
+        .checkout-form .form-group {
+            width: 100%;
+        }
+
+        /* Make buttons responsive as well */
+        .payment-method button {
+            width: 100%;
+            padding: 12px 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header-info {
+            font-size: 14px;
+        }
+
+        .logo img {
+            width: 150px; /* Smaller logo for mobile view */
+        }
+
+        .cart-table img {
+            width: 60px; /* Adjust product images for mobile */
+        }
+
+        .cart-table td, .cart-table th {
+            font-size: 12px;
+            padding: 6px 8px;
+        }
+
+        .cart-btn .apply-coupon-btn {
+            width: 100%;
+            padding: 10px;
+        }
+
+        /* Ensure cart table cells stack vertically on small screens */
+        .cart-table td, .cart-table th {
+            display: block;
+            width: 100%;
+        }
+
+        .cart-table {
+            border-collapse: separate;
+            border-spacing: 0 10px; /* Add space between table rows */
+        }
+    }
+
+    /* Styling for 'Proceed to Payment' button */
+    .payment-method button {
+        margin-top: 20px;
+        padding: 12px 30px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .payment-method button:hover {
+        background-color: #555;
+    }
+
+    /* Fix for image sizing */
+    img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto;
+    }
+
+    /* Apply Coupon Button Style */
     .cart-btn .apply-coupon-btn {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
+        background-color: #e0e0e0;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
     }
-}
 
-/* Styling for 'Proceed to Payment' button */
-.payment-method button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .cart-btn .apply-coupon-btn:hover {
+        background-color: #d0d0d0; /* Hover effect (lighter shade) */
+    }
 
-.payment-method button:hover {
-    background-color: #555;
-}
+    .cart-table input[type="number"] {
+        -moz-appearance: textfield; /* Firefox */
+        -webkit-appearance: none;   /* Chrome/Safari */
+        appearance: none;           /* Standard */
+        width: 60px; /* Adjust width if needed */
+        padding: 5px;
+    }
 
-/* Fix for image sizing */
-img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
-}
+    /* New styling for payment logos */
+    .payment-logo-container {
+        display: inline-block;
+        margin-left: 10px;
+    }
 
-/* Apply Coupon Button Style */
-.cart-btn .apply-coupon-btn {
-    width: 100%; 
-    padding: 12px; 
-    background-color: #e0e0e0; 
-    color: #333; 
-    border: 1px solid #ccc; 
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-}
+    .payment-logo {
+        width: 30px; /* Adjust the size of the logo */
+        height: auto;
+    }
 
-.cart-btn .apply-coupon-btn:hover {
-    background-color: #d0d0d0; /* Hover effect (lighter shade) */
-}
+    @media (max-width: 576px) {
+        .page-container {
+            padding: 0 10px; /* Adjust container padding for very small screens */
+        }
 
-.cart-table input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
-    -webkit-appearance: none;   /* Chrome/Safari */
-    appearance: none;           /* Standard */
-    width: 60px; /* Adjust width if needed */
-    padding: 5px;
-}
+        .cart-table td, .cart-table th {
+            font-size: 10px; /* Smaller font size for very small screens */
+            padding: 4px 6px; /* Less padding for very small screens */
+        }
 
-/* New styling for payment logos */
-.payment-logo-container {
-    display: inline-block;
-    margin-left: 10px;
-}
+        .cart-table img {
+            width: 50px; /* Adjust product images for very small screens */
+        }
 
-.payment-logo {
-    width: 30px; /* Adjust the size of the logo */
-    height: auto;
-}
+        .apply-coupon-btn {
+            padding: 8px; /* Adjust padding for very small screens */
+        }
+
+        /* Ensure cart table cells stack vertically on small screens */
+        .cart-table td, .cart-table th {
+            display: block;
+            width: 100%;
+            word-wrap: break-word; /* Ensure long text wraps */
+        }
+
+        .cart-table {
+            border-collapse: separate;
+            border-spacing: 0 10px; /* Add space between table rows */
+        }
+    }
     </style>
 </head>
 
