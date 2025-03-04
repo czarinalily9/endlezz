@@ -87,7 +87,7 @@ ol {
   collection start
 -----------------------*/
    .collections-title {
-        font-size: 4rem; /* Increased size for Collections Overview */
+        font-size: 2rem; /* Increased size for Collections Overview */
         font-weight: bold;
     }
 
@@ -110,7 +110,7 @@ ol {
     }
 
     .collection-title {
-        font-size: 1.5rem; /* Slightly smaller than Collections Overview */
+        font-size: 3.7rem; /* Slightly smaller than Collections Overview */
         font-weight: bold;
     }
 
