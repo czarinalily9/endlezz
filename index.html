@@ -130,38 +130,44 @@
     </section>
 
     <!-- Features Section Begin -->
- <section class="features-section spad">
+   <section class="features-section spad">
     <div class="features-ads">
-        <div class="container text-center">
-            <h1 style="font-size: 1.5rem; padding: 10px;">Collections Overview</h1>
-            <br>
-            <div class="collections">
-                <div class="collection">
-                    <h2>Grid Collection</h2>
-                    <p>
-                        A sleek and modern clothing line inspired by structure and symmetry. 
-                        Featuring clean lines, geometric patterns, and a contemporary aesthetic, 
-                        this collection is perfect for those who love a polished and sophisticated look.
-                    </p>
-                </div>
-                <div class="collection">
-                    <h2>Minimalist Collection</h2>
-                    <p>
-                        Timeless, simple, and effortlessly stylish. 
-                        The Minimalist Collection embraces clean silhouettes, neutral tones, 
-                        and versatile designs that elevate everyday wear. 
-                        A must-have for those who appreciate understated elegance.
-                    </p>
-                </div>
-                <div class="collection">
-                    <h2>Angel Collection</h2>
-                    <p>
-                        Soft, graceful, and ethereal—the Angel Collection brings a touch of elegance to your wardrobe. 
-                        With delicate fabrics, flowy silhouettes, and dreamy hues, 
-                        it’s perfect for those who love a light and airy aesthetic.
-                    </p>
-                </div>
-            </div>
+        <div class="container">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="text-align: center; font-size: 1.5rem; padding: 10px;">
+                            <h1>Collections Overview</h1>
+			<br></br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Grid Collection</th>
+                        <th>Minimalist Collection</th>
+                        <th>Angel Collection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            A sleek and modern clothing line inspired by structure and symmetry. 
+                            Featuring clean lines, geometric patterns, and a contemporary aesthetic, 
+                            this collection is perfect for those who love a polished and sophisticated look.
+                        </td>
+                        <td>
+                            Timeless, simple, and effortlessly stylish. 
+                            The Minimalist Collection embraces clean silhouettes, neutral tones, 
+                            and versatile designs that elevate everyday wear. 
+                            A must-have for those who appreciate understated elegance.
+                        </td>
+                        <td>
+                            Soft, graceful, and ethereal—the Angel Collection brings a touch of elegance to your wardrobe. 
+                            With delicate fabrics, flowy silhouettes, and dreamy hues, 
+                            it’s perfect for those who love a light and airy aesthetic.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
@@ -175,7 +181,7 @@
                         <div class="single-box-item first-box">
                             <img src="img/f-box-1.jpg" alt="Grid Collection" usemap="#gridMap">
                             <map name="gridMap">
-                                <area shape="poly" coords="1,1,304,1,286,156,1,156,16,45,75,47,168,58,237,51,230,87,177,78,108,76,43,71" href="grid-link.html" alt="Grid Collection">
+                                <area shape="poly" coords="1,1,304,1,286,156,1,156,50,150,100,150" href="grid-link.html" alt="Grid Collection">
                             </map>
                             <div class="box-text">
                                 <span class="trend-year">2025 GRID</span>
@@ -322,7 +328,7 @@
             <div class="col-lg-3 col-sm-6 mix all accesories bags">
                 <div class="single-product-item">
                     <figure>
-                        <a href="#" data-toggle="lightbox" data-gallery="gallery"><img src="img/products/img-8.jpg" alt=""></a>
+                        <a href="img/products/img-8.jpg"><img src="img/products/img-8.jpg" alt=""></a>
                         <div class="p-status popular">popular</div>
                     </figure>
                     <div class="product-text">
@@ -331,6 +337,17 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modals-container">
+                <!-- Modal 1 -->
+                <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <img src="img/products/img-1.jpg" class="img-fluid" 
+                                 alt="Blue Grid Cropped Polo (Full View)">
+                        </div>
+                    </div>
+                </div>
         </div>
 
 
