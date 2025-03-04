@@ -152,7 +152,22 @@ img {
     width: 30px; /* Adjust the size of the logo */
     height: auto;
 }
-	
+
+/* Adjusting Product Name and Color Container Width */
+.cart-table .product-name, .cart-table .product-color {
+    width: auto; /* Allow these containers to grow as needed */
+    white-space: normal; /* Ensure text wraps properly */
+    word-wrap: break-word; /* Prevent text from overflowing */
+}
+
+/* Optional: Adjust padding for better spacing */
+.cart-table .product-name {
+    padding-right: 20px; /* Add some space to the right of the product name */
+}
+
+.cart-table .product-color {
+    padding-left: 20px; /* Add some space to the left of the color container */
+}
     </style>
 </head>
 
