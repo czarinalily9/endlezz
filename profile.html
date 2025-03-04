@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - Endlezz Market</title>
+    <title>Profile - Endlezz Market</title>
     <link rel="icon" type="image/png" href="img/icons/logo-circle.png" />
 
     <!-- Google Fonts -->
@@ -73,17 +73,193 @@
         </div>
     </header>
 
-    <!-- Profile Section -->
-    <div class="container profile-container">
-        <div id="profile">
-            <img src="https://via.placeholder.com/120" alt="Shop Logo" class="profile-img">
-            <h2 class="profile-name">Fashion Haven</h2>
-            <p class="profile-bio">Trendy Styles | Affordable Prices | Quality Fabrics</p>
-            <div class="profile-details">
-                <p><strong>Email:</strong> contact@fashionhaven.com</p>
-                <p><strong>Location:</strong> Los Angeles, USA</p>
-                <p><strong>Established:</strong> 2020</p>
-                <p><strong>Specialty:</strong> Urban & Casual Wear</p>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        .nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+
+        .profile-details {
+            margin-top: 10px;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #f8f8f8;
+            padding: 20px;
+            height: auto;
+            min-height: 400px;
+            flex-shrink: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover {
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        /* Content */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: #ddd;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .progress {
+            width: 0%;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+   
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <img src="smurf.jpg" alt="Shop Logo" class="profile-img">
+        <h2 class="profile-name">Eric Blancaflor</h2>
+        <p class="profile-bio">Mapuan Professor | Fashion Guru | Generous Person</p>
+        <div class="profile-details">
+            <p><strong>E-Mail:</strong> ericpogi@blancacute.com</p>
+            <p><strong>Location:</strong> Manila, Philippines</p>
+            <p><strong>Account Created:</strong> 2025</p>
+            <p><strong>Specialty:</strong> Urban & Professional Wear</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#" onclick="showSection('overview')">Overview</a>
+            <a href="#" onclick="showSection('orders')">Orders</a>
+            <a href="#" onclick="showSection('rewards')">Rewards</a>
+            <a href="#" onclick="showSection('personal')">Personal Information</a>
+            <a href="#" onclick="showSection('addresses')">Addresses</a>
+            <a href="#" onclick="showSection('payment')">Payment</a>
+            <a href="#" onclick="showSection('saved')">Saved Items</a>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="content">
+            <div id="overview" class="section active">
+                <h2>Overview</h2>
+                <p>Welcome back, Eric! Here is your account summary.</p>
+            </div>
+            <div id="orders" class="section">
+                <h2>Orders</h2>
+                <p>No recent orders.</p>
+            </div>
+            <div id="rewards" class="section">
+                <h2>Rewards Progress</h2>
+                <p>You currently have <strong>0 points</strong> and <strong>0 rewards</strong> available to redeem.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <p>You are 200 points away from your next $20 reward.</p>
+            </div>
+            <div id="personal" class="section">
+                <h2>Personal Information</h2>
+                <p><strong>Email:</strong> ericpogi@blancacute.com</p>
+                <p><strong>Password:</strong> ****** <a href="#">Change</a></p>
+                <p><strong>Member ID:</strong> C04029516457</p>
+                <p><strong>Name:</strong> Eric Blancaflor</p>
+                <p><strong>Phone Number:</strong> <a href="#">Add Phone Number</a></p>
+                <p><strong>Birthday:</strong> <a href="#">Add Birthday</a></p>
+                <p><strong>Gender:</strong> <a href="#">Add Gender</a></p>
+            </div>
+            <div id="addresses" class="section">
+                <h2>Addresses</h2>
+                <p>No saved addresses. <a href="#">Add Address</a></p>
+            </div>
+            <div id="payment" class="section">
+                <h2>Payment</h2>
+                <p>No saved payment methods. <a href="#">Add Payment Method</a></p>
+            </div>
+            <div id="saved" class="section">
+                <h2>Saved Items</h2>
+                <p>No saved items yet.</p>
             </div>
         </div>
     </div>
