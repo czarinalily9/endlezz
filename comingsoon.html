@@ -8,46 +8,50 @@
     <title>Coming Soon - Endlezz Market</title>
     <link rel="icon" type="image/png" href="img/icons/logo-circle.png" />
 
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 
     <style>
         body {
             background-image: url("img/comingsoon.jpg");
-            background-size: cover; /* Ensures the image covers the entire background */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: #333;
             font-family: 'Montserrat', sans-serif;
             text-align: center;
-            padding: 50px;
+            height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 100px 100px; /* Removes default margin */
-
         }
 
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-
-        p {
+        .floating-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
             font-size: 18px;
-            color: #555;
+            font-weight: bold;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background: rgba(255, 255, 255, 0.4);
         }
     </style>
 </head>
+
+<body>
+    <a href="https://yourlink.com" class="floating-button">Go to Another Page</a>
+</body>
 
 </html>
