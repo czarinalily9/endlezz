@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+        .nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .sidebar {
+            width: 250px;
+            float: left;
+            padding: 20px;
+            background: #f8f8f8;
+            height: 100%;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        .sidebar a:hover {
+            background: #ddd;
+            border-radius: 5px;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ddd;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .progress {
+            width: 0%;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 10px;
+        }
+        .profile-details {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">Hi, Ed Rizz</a>
+        <a href="#" onclick="showSection('signout')">Sign Out</a>
+    </div>
+    <div class="container">
+        <div id="profile">
+            <img src="https://via.placeholder.com/120" alt="Shop Logo" class="profile-img">
+            <h2 class="profile-name">Fashion Haven</h2>
+            <p class="profile-bio">Trendy Styles | Affordable Prices | Quality Fabrics</p>
+            <div class="profile-details">
+                <p><strong>Email:</strong> contact@fashionhaven.com</p>
+                <p><strong>Location:</strong> Los Angeles, USA</p>
+                <p><strong>Established:</strong> 2020</p>
+                <p><strong>Specialty:</strong> Urban & Casual Wear</p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="#" onclick="showSection('overview')">Overview</a>
+            <a href="#" onclick="showSection('orders')">Orders</a>
+            <a href="#" onclick="showSection('rewards')">Rewards</a>
+            <a href="#" onclick="showSection('personal')">Personal Information</a>
+            <a href="#" onclick="showSection('addresses')">Addresses</a>
+            <a href="#" onclick="showSection('payment')">Payment</a>
+            <a href="#" onclick="showSection('saved')">Saved Items</a>
+        </div>
+        <div class="content">
+            <div id="overview" class="section active">
+                <h2>Overview</h2>
+                <p>Welcome back, Ed Rizz! Here is your account summary.</p>
+            </div>
+            <div id="orders" class="section">
+                <h2>Orders</h2>
+                <p>No recent orders.</p>
+            </div>
+            <div id="rewards" class="section">
+                <h2>Rewards Progress</h2>
+                <p>You currently have <strong>0 points</strong> and <strong>0 rewards</strong> available to redeem.</p>
+                <d
