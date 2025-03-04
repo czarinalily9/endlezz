@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
       
 <style>
-    <style>
+   <style>
     /* Ensuring full name and address are aligned */
     .checkout-form .form-group {
         display: flex;
@@ -64,7 +64,6 @@
     .cart-table td, .cart-table th {
         padding: 12px 15px;
         text-align: left;
-        word-wrap: break-word; /* Ensure long text wraps */
     }
 
     /* Container Settings for better responsiveness */
@@ -119,16 +118,6 @@
             width: 100%;
             padding: 10px;
         }
-
-        .cart-table td, .cart-table th {
-            display: block; /* Ensure table cells stack vertically on small screens */
-            width: 100%; /* Make them take full width */
-        }
-
-        .cart-table {
-            border-collapse: separate;
-            border-spacing: 0 10px; /* Add space between table rows */
-        }
     }
 
     /* Styling for 'Proceed to Payment' button */
@@ -154,11 +143,11 @@
 
     /* Apply Coupon Button Style */
     .cart-btn .apply-coupon-btn {
-        width: 100%;
-        padding: 12px;
-        background-color: #e0e0e0;
-        color: #333;
-        border: 1px solid #ccc;
+        width: 100%; 
+        padding: 12px; 
+        background-color: #e0e0e0; 
+        color: #333; 
+        border: 1px solid #ccc; 
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
@@ -209,6 +198,7 @@
         .cart-table td, .cart-table th {
             display: block; /* Ensure table cells stack vertically on small screens */
             width: 100%; /* Make them take full width */
+            word-wrap: break-word; /* Ensure long text wraps */
         }
 
         .cart-table {
