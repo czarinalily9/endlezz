@@ -232,10 +232,20 @@ ol {
 -----------------------*/
 /* Header Container */
 .header-section {
+	display: flex;
     width: 100%;
     background: #fff;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
+	z-index: 5;
+	position: relative; /* Ensure proper positioning */
+    z-index: 10; 
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Header Layout */
@@ -243,9 +253,8 @@ ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0px;
 }
 
 /* Left Navigation */
