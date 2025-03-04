@@ -1030,6 +1030,16 @@ ol {
     display: inline-block;
 }
 
+.more-blog {
+	margin-top: 16px;
+}
+
+.more-blog .primary-btn {
+	color: #242424;
+	border-color: #D0D7DB;
+	font-weight: 700;
+}
+
 /*---------------------
   Logo Section
 -----------------------*/
