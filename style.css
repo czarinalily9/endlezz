@@ -227,108 +227,6 @@ ol {
   Header
 -----------------------*/
 
-/*---------------------
-      NEW Header
------------------------*/
-/* Header Container */
-.header-section {
-	display: flex;
-    width: 100%;
-    background: #fff;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-	position: relative; /* Ensure proper positioning */
-    z-index: 10; 
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Header Layout */
-.inner-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0px;
-}
-
-/* Left Navigation */
-.left-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.left-menu ul li {
-    position: relative;
-    margin-right: 20px;
-}
-
-.left-menu ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    padding: 10px 15px;
-    display: block;
-}
-
-/* Sub-menu Dropdown */
-.left-menu ul .sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 180px;
-    padding: 0;
-}
-
-.left-menu ul .sub-menu li {
-    display: block;
-}
-
-.left-menu ul .sub-menu li a {
-    padding: 10px;
-    display: block;
-    color: #333;
-    background: #f8f8f8;
-}
-
-.left-menu ul li:hover .sub-menu {
-    display: block;
-}
-
-/* Center Logo */
-.logo {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.logo img {
-    max-width: 150px; /* Adjust as needed */
-}
-
-/* Right Icons */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-right img {
-    width: 24px; /* Adjust icon size */
-    cursor: pointer;
-}
-/*---------------------
-     END NEW  Header
------------------------*/
-
 .header-section {
 	height: 104px;
 	padding-top: 38px;
@@ -348,7 +246,7 @@ ol {
 }
 
 .inner-header .header-right img {
-	display: inline-block;
+	display: block;
 	margin-right: 20px;
 	cursor: pointer;
 }
@@ -954,6 +852,9 @@ ol {
 	margin-bottom: 40px;
 }
 
+/*---------------------
+  Lookbok Section
+-----------------------*/
 
 .lookbok-right .primary-btn.look-btn {
 	background-color: #B0BCC2;
@@ -980,9 +881,76 @@ ol {
 	line-height: 97px;
 }
 
+.featured-blog-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.featured-blog-title {
+    color: red;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.featured-blog-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.featured-blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-blog-card {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.featured-blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-blog-content {
+    padding: 15px;
+}
+
+.featured-blog-content span {
+    font-size: 12px;
+    color: gray;
+}
+
+.featured-blog-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.featured-blog-content a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+
+
 /*---------------------
   Logo Section
 -----------------------*/
+
 .logo-section {
 	padding: 70px 120px;
 }
@@ -2987,12 +2955,6 @@ ol {
   padding: 0 20px;
 }
 
-.cart-container {
-  max-width: 1200px; /* Maximum width for the main content */
-  margin: 0 auto; /* Center the container */
-  padding: 0 15px; /* Add some padding for spacing */
-}
-
 .cart-table {
   margin-bottom: 28px;
 }
@@ -3291,67 +3253,6 @@ ol {
 .total-info .total-table table th {
   text-align: left;
   padding-left: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 785px) {
-  .cart-container {
-    padding: 0 10px;
-  }
-  .cart-table table .product-h {
-    width: 25%;
-  }
-  .cart-table table .price-col,
-  .cart-table table .quantity-col,
-  .cart-table table .total {
-    width: 20%;
-  }
-  .cart-btn {
-    padding: 30px 15px;
-  }
-  .checkout-form,
-  .payment-method {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (max-width: 430px) {
-  .cart-table table .product-h {
-    width: 40%;
-  }
-  .cart-table table .price-col,
-  .cart-table table .quantity-col,
-  .cart-table table .total {
-    width: 25%;
-  }
-  .cart-btn {
-    padding: 20px 10px;
-  }
-  .checkout-form,
-  .payment-method {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
-@media (max-width: 350px) {
-  .cart-table table .product-h {
-    width: 50%;
-  }
-  .cart-table table .price-col,
-  .cart-table table .quantity-col,
-  .cart-table table .total {
-    width: 30%;
-  }
-  .cart-btn {
-    padding: 15px 5px;
-  }
-  .checkout-form,
-  .payment-method {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
 }
 
 /*---------------------
