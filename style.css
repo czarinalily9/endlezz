@@ -916,6 +916,12 @@ ol {
 	line-height: 50px;
 }
 
+.lookbok-left .section-title h2 a{
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+}
+
 .lookbok-left p {
 	color: #787878;
 	font-size: 14px;
@@ -934,29 +940,14 @@ ol {
     color: white;
 }
 
-.lookbok-right {
-	padding-top: 105px;
-}
-
-.lookbok-right .section-title {
-	margin-bottom: 30px;
-}
-
-.lookbok-right .section-title h2 {
-	line-height: 50px;
-}
-
-.lookbok-right p {
-	color: #787878;
-	font-size: 14px;
-	line-height: 27px;
-	font-weight: 500;
-	margin-bottom: 40px;
+.lookbok-left .section-title h2 a:hover
+{
+    color: rgb(78, 78, 78);
 }
 
 
 .lookbok-right .primary-btn.look-btn {
-	background-color: #B0BCC2;
+	background-color: #00aaff;
 }
 
 .lookbok-pic {
@@ -979,6 +970,67 @@ ol {
 	font-weight: 600;
 	line-height: 97px;
 }
+
+.reviews-title {
+    margin-bottom: 15px; /* Reduce gap between title and boxes */
+  }
+  .reviews .card {
+    transition: 0.5s;
+    margin-top: 15px; /* Adjust spacing between boxes and title */
+    margin-bottom: 15px; /* Add space at the bottom of each box */
+    padding: 30px; /* Ensure consistent padding inside boxes */
+  }
+  .card-icon {
+    font-size: 25px; /* Adjust size of the quote icon */
+    color: black; /* Set icon color to black */
+    margin: 5px auto;
+    display: block;
+  }
+  .review-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .review-link:hover .card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .review-link:visited, .review-link:focus, .review-link:active {
+    color: inherit;
+  }
+  .fixed-height {
+    height: 340px; /* Adjust height to fit new spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+  .fixed-height .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .review-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60px; /* Ensures uniform height for alignment */
+    padding: 5px;
+  }
+  .reviews-rating {
+    margin-top: 5px; /* Reduce space above the stars */
+    margin-bottom: 5px; /* Keep spacing consistent */
+    color: #ffcc00;
+    font-size: 1.5rem;
+  }
+  .blockquote-footer {
+    margin-top: 5px; /* Ensure spacing is consistent */
+  }
 
 .featured-blog-section {
     padding: 50px 20px;
