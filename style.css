@@ -86,7 +86,12 @@ ol {
 /*---------------------
   collection start
 -----------------------*/
- .collections {
+   .collections-title {
+        font-size: 2rem; /* Increased size for Collections Overview */
+        font-weight: bold;
+    }
+
+    .collections {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -104,9 +109,9 @@ ol {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .collection h2 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+    .collection-title {
+        font-size: 1.5rem; /* Slightly smaller than Collections Overview */
+        font-weight: bold;
     }
 
     .collection p {
