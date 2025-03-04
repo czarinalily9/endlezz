@@ -881,27 +881,9 @@ ol {
 	line-height: 97px;
 }
 
-/*---------------------
-  Featured Blog Section
------------------------*/
-
 .featured-blog-section {
     padding: 50px 20px;
     background-color: #fff;
-}
-
-.featured-blog-title {
-    color: red;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.featured-blog-heading {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
 }
 
 .featured-blog-container {
@@ -948,8 +930,6 @@ ol {
     padding-bottom: 2px;
     display: inline-block;
 }
-
-
 
 /*---------------------
   Logo Section
