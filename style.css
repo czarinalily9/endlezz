@@ -4252,7 +4252,7 @@ collection end
 /*---------------------
  +mobile menu Total Page
 -----------------------*/
-.left-menu {
+ .left-menu {
             display: none; /* Hide the menu by default on mobile */
         }
         
@@ -4306,5 +4306,6 @@ collection end
                 margin-bottom: 0; /* Remove margin on mobile view */
             }
         }
+
 
 	
