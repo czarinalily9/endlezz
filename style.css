@@ -4099,17 +4099,6 @@ collection end
     flex-direction: column; /* Added for better stacking on smaller screens */
 }
 
-.minimalist-section{
-	padding-top: 1000px;
-}
-
-.minimalist-left, .minimalist-right {
-    padding-top: 150px;
-    text-align: center; /* Added for better alignment on smaller screens */
-    width: 100%; /* Ensure full width on small screens */
-}
-
-
 @media (max-width: 768px) {
     .minimalist {
         height: 200vh; /* Increase the height for mobile view */
