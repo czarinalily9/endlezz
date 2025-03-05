@@ -4100,8 +4100,7 @@ collection end
 }
 
 .minimalist-section{
-	top: 50%;
-	padding: 500px 300px;
+	top:100%;
 }
 
 .minimalist-left, .minimalist-right {
