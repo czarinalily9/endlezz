@@ -107,91 +107,6 @@
 
 
 
-   <style>
-        /* Profile Header */
-        .profile-header {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #ddd;
-        }
-
-        .profile-details {
-            margin-top: 10px;
-        }
-
-        /* Main Container */
-        .profile-container {
-            display: flex;
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background: #f8f8f8;
-            padding: 20px;
-            height: auto;
-            min-height: 400px;
-            flex-shrink: 0;
-        }
-
-        .sidebar a {
-            display: block;
-            padding: 10px;
-            color: black;
-            text-decoration: none;
-            margin-bottom: 5px;
-        }
-
-        .sidebar a:hover {
-            background: #ddd;
-            border-radius: 5px;
-        }
-
-        /* Content */
-        .profile-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-
-        .profile-section {
-            display: none;
-        }
-
-        .profile-active {
-            display: block;
-        }
-
-        .progress-bar {
-            width: 100%;
-            background: #ddd;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-
-        .progress {
-            width: 0%;
-            height: 20px;
-            background: #4CAF50;
-            border-radius: 10px;
-        }
-    </style>
 </head>
 <body>
    
@@ -228,11 +143,11 @@
                 <h2>Overview</h2>
                 <p>Welcome back, Eric! Here is your account summary.</p>
             </div>
-            <div id="orders" class="profile-section profile-active">
+            <div id="orders" class="profile-section">
                 <h2>Orders</h2>
                 <p>No recent orders.</p>
             </div>
-            <div id="rewards" class="profile-section profile-active">
+            <div id="rewards" class="profile-section">
                 <h2>Rewards Progress</h2>
                 <p>You currently have <strong>0 points</strong> and <strong>0 rewards</strong> available to redeem.</p>
                 <div class="progress-bar">
@@ -240,7 +155,7 @@
                 </div>
                 <p>You are 200 points away from your next $20 reward.</p>
             </div>
-            <div id="personal" class="profile-section profile-active">
+            <div id="personal" class="profile-section">
                 <h2>Personal Information</h2>
                 <p><strong>Email:</strong> ericpogi@blancacute.com</p>
                 <p><strong>Password:</strong> ****** <a href="#">Change</a></p>
@@ -250,15 +165,15 @@
                 <p><strong>Birthday:</strong> <a href="#">Add Birthday</a></p>
                 <p><strong>Gender:</strong> <a href="#">Add Gender</a></p>
             </div>
-            <div id="addresses" class="profile-section profile-active">
+            <div id="addresses" class="profile-section">
                 <h2>Addresses</h2>
                 <p>No saved addresses. <a href="#">Add Address</a></p>
             </div>
-            <div id="payment" class="profile-section profile-active">
+            <div id="payment" class="profile-section">
                 <h2>Payment</h2>
                 <p>No saved payment methods. <a href="#">Add Payment Method</a></p>
             </div>
-            <div id="saved" class="profile-section profile-active">
+            <div id="saved" class="profile-section">
                 <h2>Saved Items</h2>
                 <p>No saved items yet.</p>
             </div>
@@ -366,9 +281,9 @@
     <script src="js/main.js"></script>
     <script>
         function showSection(sectionId) {
-            let sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
+            let sections = document.querySelectorAll('.profile-section');
+            sections.forEach(section => section.classList.remove('profile-active'));
+            document.getElementById(sectionId).classList.add('profile-active');
         }
     </script>
 </body>

@@ -4374,6 +4374,19 @@ collection end
           display: none;
       }
 
+      .profile-section h2 {
+        font-weight: 500;
+       font-size: 1.5rem;
+    }
+
+    .profile-section a {
+     text-decoration: none;
+     color: blue;
+  }
+
+  .profile-section a:hover {
+    color: gray;
+ }
       .profile-active {
           display: block;
       }
