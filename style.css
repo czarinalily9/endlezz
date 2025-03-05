@@ -4106,7 +4106,8 @@ collection end
 }
 
 .minimalist-left, .minimalist-right {
-    padding-top: 105px;
+    padding-top: 150px;
+height: 50%;
     text-align: center; /* Added for better alignment on smaller screens */
     width: 100%; /* Ensure full width on small screens */
 }
