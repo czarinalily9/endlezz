@@ -4099,6 +4099,11 @@ collection end
     flex-direction: column; /* Added for better stacking on smaller screens */
 }
 
+.minimalist-section{
+	top: 50%;
+	padding: 2.2rem 1.5rem;
+}
+
 .minimalist-left, .minimalist-right {
     padding-top: 150px;
     text-align: center; /* Added for better alignment on smaller screens */
